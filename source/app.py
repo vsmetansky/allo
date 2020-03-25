@@ -4,6 +4,10 @@ from scrapy.utils.project import get_project_settings
 from scrapy.crawler import CrawlerProcess
 
 
+def file_to_xhtml(file_name):
+    pass
+
+
 def read_args():
     parser = argparse.ArgumentParser()
 
@@ -22,6 +26,8 @@ def run():
     process.crawl('store_item_spider',
                   item_num=args.item_num, file_name=args.file_name)
     process.start()
+
+    file_to_xhtml(args.file_name)
 
 
 if __name__ == '__main__':

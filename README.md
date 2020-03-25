@@ -1,0 +1,1 @@
+# Scraper that gets (name, price, image, description) data from allo.ua
