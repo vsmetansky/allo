@@ -10,7 +10,7 @@ def read_args():
     parser.add_argument('-f', '--file-name', dest='file_name',
                         type=str, default='data.xml')
     parser.add_argument('-n', '--item-num', dest='item_num',
-                        type=int, default=20)
+                        type=int, default=5)
 
     return parser.parse_args()
 

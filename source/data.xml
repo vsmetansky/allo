@@ -1,2 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<data></data>
+<data>
+    <product>
+        <name>Samsung Galaxy A51 4/64GB Red(SM-A515FZRUSEK)</name>
+        <price>8 199</price>
+        <image>https://i.allo.ua/media/catalog/product/cache/3/image/425x295/799896e5c6c37e11608b9f8e1d047d15/s/d/sdfhg_2_1.jpg</image>
+        <info></info>
+    </product>
+    <product>
+        <name>Motorola Moto E6 Plus 2/32 XT2025-2 Polished Graphite</name>
+        <price>3 399</price>
+        <image>https://i.allo.ua/media/catalog/product/cache/3/image/425x295/799896e5c6c37e11608b9f8e1d047d15/c/o/copy_of_motoe6_plus_polished_graphite_backside__1.jpg</image>
+        <info></info>
+    </product>
+    <product>
+        <name>Samsung Galaxy Fold 12/512GB Silver (SM-F900FZSDSEK)</name>
+        <price>56 999</price>
+        <image>https://i.allo.ua/media/catalog/product/cache/3/image/425x295/799896e5c6c37e11608b9f8e1d047d15/s/a/samsung_galaxy_fold_12_512gb_silver_images_15092010446.jpg</image>
+        <info></info>
+    </product>
+</data>

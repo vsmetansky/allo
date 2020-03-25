@@ -27,6 +27,7 @@ class StoreItemSpider(CrawlSpider):
             raise CloseSpider('Extracted all the items!')
 
     def parse_item(self, response):
+        self.count_items()
         return StoreItem(
             name=self._get_name(response),
             price=self._get_price(response),
@@ -34,13 +35,13 @@ class StoreItemSpider(CrawlSpider):
             info=self._get_info(response))
 
     def _get_name(self, response):
-        return response.xpath('//h1[@class="product-title"]/text()').get()
+        return response.xpath('//h1[@id="product-title-h1"]/text()').get().strip()
 
     def _get_price(self, response):
-        return response.xpath('//p[@class="new-price" or @class="regular-price"]/span[@class="price"]/text()').get()
+        return response.xpath('//span[@class="price"]/text()').get().strip()
 
     def _get_image(self, response):
         return response.xpath('//img[@id="image"]/@src').get()
 
     def _get_info(self, response):
-        return response.xpath('//div[@class="cont"]/text()').get()
+        return response.xpath('//div[@class="cont"]/text()').get().strip()
