@@ -5,7 +5,7 @@
 Scraper extracts (name, price, image, description) data for each
 product of the website. Data is then serialized into XML format and
 saved to a file. Moreover, .xhtml file is formed from newly
-created .xml file. 
+created .xml file (data is mapped into a table). 
 
 
 ## Requirements

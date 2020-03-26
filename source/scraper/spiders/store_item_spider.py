@@ -44,4 +44,5 @@ class StoreItemSpider(CrawlSpider):
         return response.xpath('//img[@id="image"]/@src').get()
 
     def _get_info(self, response):
-        return response.xpath('//div[@class="cont"]/text()').get().strip()
+        paragraphs = response.xpath('//div[@class="cont"]/text()').getall()
+        return ''.join(paragraphs).strip()

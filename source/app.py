@@ -1,7 +1,9 @@
 import argparse
+from os.path import splitext
 
 from scrapy.utils.project import get_project_settings
 from scrapy.crawler import CrawlerProcess
+from xhtml_converter import convert, write
 
 
 def file_to_xhtml(file_name):
@@ -14,7 +16,7 @@ def read_args():
     parser.add_argument('-f', '--file-name', dest='file_name',
                         type=str, default='data.xml')
     parser.add_argument('-n', '--item-num', dest='item_num',
-                        type=int, default=5)
+                        type=int, default=20)
 
     return parser.parse_args()
 
@@ -26,8 +28,8 @@ def run():
     process.crawl('store_item_spider',
                   item_num=args.item_num, file_name=args.file_name)
     process.start()
-
-    file_to_xhtml(args.file_name)
+    name_base = splitext(args.file_name)[0]
+    write(f'{name_base}.xhtml', convert(f'{name_base}.xml', 'transform.xsl'))
 
 
 if __name__ == '__main__':
