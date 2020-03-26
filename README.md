@@ -1,4 +1,4 @@
-# Scraper for [allo.ua] website
+# Scraper for (allo.ua)[http://allo.ua] website
 
 
 ## About
@@ -14,7 +14,7 @@ created .xml file (data is mapped into a table).
 
 ## Quickstart
 ### Linux
-1. git clone [https://github.com/vsmetansky/allo.git]
+1. git clone https://github.com/vsmetansky/allo.git
 2. cd allo
 3. bash prepare.sh
 4. bash start.sh
