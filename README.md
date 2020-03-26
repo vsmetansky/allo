@@ -1,4 +1,4 @@
-# Scraper for allo.ua website
+# Scraper for [allo.ua] website
 
 
 ## About
@@ -12,8 +12,9 @@ created .xml file (data is mapped into a table).
 * Python 3.6 or higher.
 
 
-## Running scraper
+## Quickstart
 ### Linux
-1. cd allo
-2. bash prepare.sh
-3. bash start.sh
+1. git clone [https://github.com/vsmetansky/allo.git]
+2. cd allo
+3. bash prepare.sh
+4. bash start.sh
