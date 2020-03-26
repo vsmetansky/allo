@@ -1,4 +1,4 @@
-# Scraper for (allo.ua)[http://allo.ua] website
+# Scraper for allo.ua website
 
 
 ## About
