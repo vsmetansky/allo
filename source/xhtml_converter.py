@@ -9,6 +9,6 @@ def convert(file_name, transform_name):
 
 
 def write(file_name, dom):
-    dom_str = etree.tostring(dom, pretty_print=True)
-    with open(file_name, 'wb') as f:
+    dom_str = etree.tounicode(dom, pretty_print=True)
+    with open(file_name, 'w') as f:
         f.write(dom_str)
