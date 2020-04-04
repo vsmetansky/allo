@@ -1,8 +1,12 @@
+"""Provides 'scraper' with spider class for extracting data from allo.ua."""
+
 from scrapy.spiders import CrawlSpider, Rule
 from scrapy.linkextractors import LinkExtractor
 from scrapy.exceptions import CloseSpider
 
-from scraper.items import StoreItem
+from allo.scraper.items import StoreItem
+
+STOP_MSG = 'Extracted all the items!'
 
 
 class StoreItemSpider(CrawlSpider):
@@ -24,7 +28,7 @@ class StoreItemSpider(CrawlSpider):
         if self.extracted_num < self.item_num:
             self.extracted_num += 1
         else:
-            raise CloseSpider('Extracted all the items!')
+            raise CloseSpider(STOP_MSG)
 
     def parse_item(self, response):
         self.count_items()

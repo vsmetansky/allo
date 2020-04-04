@@ -1,8 +1,8 @@
-from scraper.exporters import XmlStoreItemExporter
+from allo.scraper.exporters import XmlStoreItemExporter
 
 
 class XmlExportPipeline(object):
-    """Serialize items to XML in specific format"""
+    """Exports items to XML in specific format."""
 
     def open_spider(self, spider):
         self.file = open(spider.file_name, 'w')

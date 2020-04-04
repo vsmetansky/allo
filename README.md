@@ -12,9 +12,13 @@ created .xml file (data is mapped into a table).
 * Python 3.6 or higher.
 
 
-## Quickstart
+## Install
 ### Linux
-1. git clone https://github.com/vsmetansky/allo.git
-2. cd allo
-3. bash prepare.sh
-4. bash start.sh
+1. git clone https://github.com/vsmetansky/extractor.git
+1. cd extractor
+2. pip3 install .
+
+
+## Run
+### Linux
+1. allo [-h] [-f FILE_NAME] [-n ITEM_NUM] 
